@@ -1,5 +1,7 @@
 # Entrega — consolidador de reservas Onfly
 
+[![tests](https://github.com/christiano-gonara/onfly-desafio/actions/workflows/tests.yml/badge.svg)](https://github.com/christiano-gonara/onfly-desafio/actions/workflows/tests.yml)
+
 O CLI gerava um relatório com números errados: lia só 200 das 300 reservas, contava noites negativas, convertia o câmbio ao contrário e faturava reservas `NO_SHOW`. Encontrei 5 defeitos, corrigi os 5 e agora os números batem com o cálculo independente e com a amostra do README.
 
 | | Antes | Depois |
@@ -28,11 +30,11 @@ flowchart LR
 
 ## Defeitos corrigidos
 
-1. **Leitura cortada em 200 linhas** (`csv_reservation_repository.py`). Um `break` parava a leitura na linha 200 e descartava o resto sem avisar. Tirei o corte.
-2. **Câmbio invertido** (`currency_converter.py`). O código dividia o valor pela taxa em vez de multiplicar, e ainda passava por `float`, que perde centavos. Agora é `valor * taxa`, só com `Decimal`.
-3. **`NO_SHOW` faturado** (`status_policy.py`). A regra era "tudo menos `CANCELLED`", então `NO_SHOW` entrava nos totais. Agora só `CONFIRMED` conta.
-4. **Noites pelo dia do mês** (`stay_calculator.py`). O código subtraía só o dia (`31 - 2`), e não a data inteira, o que dava noites negativas em toda virada de mês ou de ano. Agora é a diferença entre as datas vezes os quartos.
-5. **Ranking ao contrário** (`report_builder.py`). Os hotéis saíam do menor valor para o maior. Agora saem do maior para o menor, com empate decidido por `hotel_id`.
+1. **Leitura cortada em 200 linhas** (`csv_reservation_repository.py`, [commit](https://github.com/christiano-gonara/onfly-desafio/commit/16880c8)). Um `break` parava a leitura na linha 200 e descartava o resto sem avisar. Tirei o corte.
+2. **Câmbio invertido** (`currency_converter.py`, [commit](https://github.com/christiano-gonara/onfly-desafio/commit/6833909)). O código dividia o valor pela taxa em vez de multiplicar, e ainda passava por `float`, que perde centavos. Agora é `valor * taxa`, só com `Decimal`.
+3. **`NO_SHOW` faturado** (`status_policy.py`, [commit](https://github.com/christiano-gonara/onfly-desafio/commit/acf830e)). A regra era "tudo menos `CANCELLED`", então `NO_SHOW` entrava nos totais. Agora só `CONFIRMED` conta.
+4. **Noites pelo dia do mês** (`stay_calculator.py`, [commit](https://github.com/christiano-gonara/onfly-desafio/commit/15b1d7e)). O código subtraía só o dia (`2 - 31` de 31/01 a 02/02), e não a data inteira, o que dava noites negativas em toda virada de mês ou de ano. Agora é a diferença entre as datas vezes os quartos.
+5. **Ranking ao contrário** (`report_builder.py`, [commit](https://github.com/christiano-gonara/onfly-desafio/commit/7f84182)). Os hotéis saíam do menor valor para o maior. Agora saem do maior para o menor, com empate decidido por `hotel_id`.
 
 Corrigi um defeito por vez e rodei os testes depois de cada um: 0 → 0 → 2 → 3 → 4 → 5 de 5. O primeiro não mudou nada porque nenhum teste fornecido usava mais de 200 linhas.
 
@@ -59,7 +61,8 @@ Fiz em duas sessões, separando o diagnóstico da correção:
 
   Os fornecidos (`test_currency.py`, `test_nights.py`, `test_regression_report.py`, `test_status_rules.py`, `test_top_hotels.py` e `helpers.py`) estão como vieram.
 
-Um detalhe que parece erro, mas não é: somando os meses de `by_month` dá 396170.01, um centavo a mais que o total. Isso acontece porque cada valor é arredondado só na hora de escrever o JSON, como o README pede.
+> [!NOTE]
+> Um detalhe que parece erro, mas não é: somando os meses de `by_month` dá 396170.01, um centavo a mais que o total. Isso acontece porque cada valor é arredondado só na hora de escrever o JSON, como o README pede.
 
 ## Como validar
 
