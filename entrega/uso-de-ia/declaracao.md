@@ -42,6 +42,8 @@ Nenhum arquivo do projeto foi alterado nesta sessão.
 | Testes das lacunas, validação defensiva, `report.json` conferido | 34 testes novos; números iguais à referência |
 | Revisar a entrega: formato do README, texto mais curto e acessível, diagrama | `README-ENTREGA.md` reescrito e pasta `uso-de-ia/` organizada |
 | Conferir o checklist do README e a apresentação dos arquivos | Pendências levantadas; declaração com diagrama e índice das sessões |
+| Um commit por defeito e repositório público no GitHub | Histórico desde o projeto original, com os testes passando 0 → 0 → 2 → 3 → 4 → 5 como na correção |
+| Checklist marcado e sessão 2 ligada aos commits | Seção "Checklist" no `README-ENTREGA.md` e link para o histórico |
 
 ## O que eu fiz
 
@@ -49,6 +51,7 @@ Nenhum arquivo do projeto foi alterado nesta sessão.
 - Conduzi a análise por partes (`data/`, `repositories/`, `services/`, `tests/`) e decidi não alterar os CSVs.
 - Defini a ordem da correção: um defeito por vez, testando a cada passo.
 - Revisei a entrega e pedi mudanças: estrutura no formato do README, texto mais curto, diagrama e conferência do checklist.
+- Escolhi um commit por defeito e autorizei a publicação do repositório.
 
 ## O que a IA fez
 
@@ -56,3 +59,4 @@ Nenhum arquivo do projeto foi alterado nesta sessão.
 - Apontou os defeitos com arquivo e linha, além das fragilidades e das lacunas de teste.
 - Escreveu as correções, a validação de entrada e os testes novos.
 - Gerou e conferiu o `report.json` e redigiu o `ANALISE.md`, o `README-ENTREGA.md` e esta declaração.
+- Montou o histórico de commits, criou o repositório no GitHub e conferiu os links publicados.

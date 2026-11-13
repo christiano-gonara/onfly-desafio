@@ -1091,3 +1091,381 @@
   no GitHub.
 
 ✻ Worked for 7s · done 18:05
+
+❯ /export /Users/christiano/dev/onfly-desafio/entrega/uso-de-ia/sessao-02.md    
+  ⎿  Conversation exported to:
+     /Users/christiano/dev/onfly-desafio/entrega/uso-de-ia/sessao-02.md
+
+❯ exportei                                                                      
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ O export foi salvo no lugar certo, com 1092 linhas e sem e-mail nem token. Ele
+  mostra que esta sessão rodou no Claude Code v2.1.325, e não no v2.1.323 da
+  sessão 1, então vou corrigir a declaração antes do commit. · summary
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Os 10 commits estão no GitHub. Agora confiro os links e os diagramas lá:
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ A entrega está completa no GitHub, com os 10 commits:
+  https://github.com/christiano-gonara/onfly-desafio
+
+  O que conferi no GitHub:
+  - Páginas: as 5 páginas da entrega abrem sem erro (README-ENTREGA.md,
+    ANALISE.md, declaracao.md, sessao-01.md e sessao-02.md).
+  - Links da declaração: apontam para as linhas 6, 84, 165 e 332 da
+    sessao-01.md, e cada uma cai exatamente no pedido seu que a tabela descreve.
+  - Diagramas: o GitHub reconhece os blocos como Mermaid. Não consigo ver a
+    imagem gerada daqui, então dê uma olhada no diagrama da declaracao.md, que é
+    novo. O do README-ENTREGA.md você já tinha visto e aprovado.
+  - Descrição do repositório: está no "About", apontando para
+    entrega/README-ENTREGA.md.
+
+  Também corrigi um detalhe na declaração antes de subir: o export mostrou que
+  esta sessão rodou no Claude Code v2.1.325, e a sessão 1 no v2.1.323. A
+  declaração agora cita as duas versões.
+
+  Antes de mandar, leia a seção "O que eu fiz" da declaracao.md. Ela foi escrita
+  a partir do que aparece nas exportações, mas precisa ser verdade sobre você.
+  Se quiser mudar algo, é só me falar que eu faço um commit docs: e subo.
+
+  Do checklist do README, só falta você enviar o link do repositório pelo forms.
+
+✻ Worked for 38s · done 18:06
+
+❯ sera que ter um .md com checklist e diagrama faria sentido?                   
+
+⏺ Um arquivo separado, eu acho que não. A ideia de mostrar o checklist marcado é
+  boa, mas cabe numa seção curta dentro do README-ENTREGA.md.
+
+  Por que não um .md novo:
+  - O checklist já existe no README.md do desafio. Num arquivo à parte, ele vira
+    uma cópia, e o avaliador teria mais um lugar para abrir.
+  - Diagramas já são dois: um mostra os defeitos e o outro as sessões. Um
+    terceiro repetiria o que eles já mostram.
+
+  O que faria sentido: fechar o README-ENTREGA.md com uma seção "Checklist" de 7
+  linhas. O GitHub mostra as caixinhas marcadas, e cada item aponta onde está a
+  prova:
+
+  ## Checklist
+
+  - [x] CLI roda com Python 3.11 — testado com 3.11.16
+  - [x] Gera `output/report.json` sem erro — [Como validar](#como-validar)
+  - [x] Relatório segue o contrato — `test_report_shape_matches_contract`
+  - [x] `pytest -q` passa com os testes fornecidos — 5 de 5, sem alteração (39
+  no total)
+  - [x] `README-ENTREGA.md` preenchido — este arquivo
+  - [x] Sessões + declaração — [`uso-de-ia/`](uso-de-ia/)
+  - [x] Repositório público no GitHub
+
+  O avaliador costuma corrigir seguindo justamente esse checklist, então ver os
+  itens marcados com a prova ao lado poupa trabalho dele.
+
+  Um detalhe sobre o export: essa mudança viraria um commit docs: depois dele,
+  então a sessao-02.md não teria esse trecho. Não vejo problema, porque o commit
+  fica no histórico do Git. Se quiser que tudo esteja na exportação, você pode
+  rodar o /export de novo no mesmo caminho depois, e ele substitui o arquivo.
+
+  Quer que eu acrescente a seção e suba?
+
+✻ Brewed for 10s · done 18:09
+
+❯ pode sim                                                                      
+
+⏺ Update(entrega/README-ENTREGA.md)
+  ⎿  Added 10 lines
+       95  ## Uso de IA
+       96  
+       97  Usei o Claude Code nas duas sessões. As exportações e a declar
+           ação estão em [`uso-de-ia/`](uso-de-ia/).
+       98 +                                                              
+       99 +## Checklist                                                  
+      100 +                                                              
+      101 +- [x] CLI roda com Python 3.11 (testado com 3.11.16)          
+      102 +- [x] Gera `output/report.json` sem erro ([Como validar](#como
+          +-validar))                                                    
+      103 +- [x] Relatório segue o contrato (`test_report_shape_matches_c
+          +ontract`)                                                     
+      104 +- [x] `pytest -q` passa com os testes fornecidos (5 de 5, sem 
+          +alteração; 39 no total)                                       
+      105 +- [x] `README-ENTREGA.md` preenchido (este arquivo)           
+      106 +- [x] Sessões + declaração ([`uso-de-ia/`](uso-de-ia/))       
+      107 +- [x] Repositório público no GitHub                           
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ A seção "Checklist" já está no fim do README-ENTREGA.md no GitHub, num commit
+  novo (docs: checklist da entrega no README-ENTREGA).
+
+  Conferi como o GitHub mostra a página: os 7 itens aparecem como caixinhas
+  marcadas, e o link "Como validar" leva para a seção certa.
+
+  O repositório agora tem 11 commits. Se quiser que a sessao-02.md também
+  registre esta última parte, rode o /export de novo no mesmo caminho e me
+  avise, que eu subo o arquivo atualizado. Não é obrigatório, porque essa
+  mudança já aparece no histórico do Git.
+
+  Antes de enviar o link pelo forms, só falta você ler a seção "O que eu fiz" da
+  declaracao.md: https://github.com/christiano-gonara/onfly-desafio
+
+✻ Cogitated for 12s · done 18:09
+
+❯ entao o readme analise e entrega eh os suficientes ne?                        
+
+⏺ Sim, é suficiente. Esta é a função de cada arquivo:
+
+  Arquivo: entrega/README-ENTREGA.md
+  Obrigatório?: Sim
+  Função: O principal: defeitos, causa raiz, investigação, como validar, pytest
+  e
+    checklist
+  ────────────────────────────────────────
+  Arquivo: entrega/uso-de-ia/sessao-01.md e sessao-02.md
+  Obrigatório?: Sim, no caminho com IA
+  Função: As exportações das duas sessões
+  ────────────────────────────────────────
+  Arquivo: entrega/uso-de-ia/declaracao.md
+  Obrigatório?: Sim, no caminho com IA
+  Função: Ferramenta, modelo e quem fez o quê
+  ────────────────────────────────────────
+  Arquivo: entrega/ANALISE.md
+  Obrigatório?: Não
+  Função: O diagnóstico detalhado da sessão 1, linkado no README-ENTREGA.md
+  ────────────────────────────────────────
+  Arquivo: README.md (raiz)
+  Obrigatório?: Não é seu
+  Função: O enunciado do desafio, que continua sem alteração
+
+  Tudo o que o README do desafio pede está coberto. O ANALISE.md é um extra:
+  mostra que você diagnosticou antes de corrigir e liga as duas sessões. Eu não
+  acrescentaria mais nenhum arquivo.
+
+  Antes de mandar o link pelo forms, falta só você ler a seção "O que eu fiz" da
+  declaracao.md.
+
+✻ Worked for 5s · done 18:09
+
+❯ diagnotistico detalhado da sessao 1 e pq nao um diagnostico da sesao 2        
+  tambem?                                                                       
+
+⏺ Porque a sessão 2 não fez diagnóstico, ela agiu. O equivalente do ANALISE.md
+  para ela já existe, só que em dois lugares:
+
+  ┌───────────┬──────────────────────────┬──────────────────────────────────┐
+  │  Sessão   │        O que fez         │       Onde está o registro       │
+  ├───────────┼──────────────────────────┼──────────────────────────────────┤
+  │ 1,        │ Descobriu o que estava   │ ANALISE.md                       │
+  │ análise   │ errado                   │                                  │
+  ├───────────┼──────────────────────────┼──────────────────────────────────┤
+  │ 2, ação   │ Corrigiu, testou e       │ README-ENTREGA.md e o histórico  │
+  │           │ conferiu                 │ do Git                           │
+  └───────────┴──────────────────────────┴──────────────────────────────────┘
+
+  O README-ENTREGA.md é o relatório da sessão 2: o que mudou, o resultado antes
+  e depois, os testes novos e como validar. Foi por isso que o RELATORIO.md
+  virou ele. E os commits são o passo a passo: um por defeito, na mesma ordem da
+  análise, e dá para conferir cada correção isolada.
+
+  Um ACAO.md separado repetiria o README-ENTREGA.md quase linha por linha, e o
+  avaliador leria a mesma coisa duas vezes.
+
+  O que pode ajudar é deixar essa simetria explícita. Na seção "Como
+  investiguei" do README-ENTREGA.md, o item da sessão 2 poderia linkar o
+  histórico de commits, assim como o da sessão 1 linka o ANALISE.md:
+
+  ▎ Sessão 2, ação (passo a passo nos commits 
+  ▎ (https://github.com/christiano-gonara/onfly-desafio/commits/main), um por 
+  ▎ defeito). Corrigi os defeitos na ordem da análise...
+
+  Quer que eu faça esse ajuste e suba?
+
+✻ Churned for 9s · done 18:10
+
+❯ pode sim                                                                      
+
+⏺ Update(entrega/README-ENTREGA.md)
+  ⎿  Added 1 line, removed 1 line
+      41  Fiz em duas sessões, separando o diagnóstico da correção:
+      42  
+      43  - **Sessão 1, análise** (detalhes em [`ANALISE.md`](ANALISE.md)
+          ). Li as regras do README, rodei os testes e o CLI do jeito que
+           estavam, chequei os CSVs (estão limpos, como o README diz) e c
+          alculei o resultado certo com um script à parte. A diferença en
+          tre esse cálculo e o que o CLI gerava apontou os 5 defeitos. Ne
+          nhum arquivo do projeto foi alterado nessa sessão.
+      44 -- **Sessão 2, ação.** Corrigi os defeitos na ordem da análise, 
+         -adicionei testes para o que os fornecidos não cobriam, gerei o 
+         -relatório e conferi com a referência da sessão 1.              
+      44 +- **Sessão 2, ação** (passo a passo nos [commits](https://githu
+         +b.com/christiano-gonara/onfly-desafio/commits/main), um por def
+         +eito). Corrigi os defeitos na ordem da análise, adicionei teste
+         +s para o que os fornecidos não cobriam, gerei o relatório e con
+         +feri com a referência da sessão 1.                             
+      45  
+      46  ## O que mais mudou
+      47  
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Fiz o ajuste e subi. Na seção "Como investiguei" do README-ENTREGA.md, as duas
+  sessões agora apontam para o próprio registro:
+
+  - Sessão 1: detalhes em ANALISE.md.
+  - Sessão 2: passo a passo nos commits, um por defeito. O link abre a página de
+    commits do repositório; conferi que ela carrega.
+
+  O repositório está com 12 commits.
+
+  Se quiser que a sessao-02.md inclua estas últimas mudanças, rode o /export de
+  novo no mesmo caminho e me avise, que eu subo. Não é obrigatório, porque elas
+  já ficam registradas nos commits.
+
+  Depois de ler a seção "O que eu fiz" da declaracao.md, é só enviar o link pelo
+  forms: https://github.com/christiano-gonara/onfly-desafio
+
+✻ Worked for 13s · done 18:10
+
+❯ tu colocou o checklist na sessao 2 ne, porem nao vi na sessao 1               
+
+⏺ Não está em nenhuma das duas sessões. O checklist está no
+  entrega/README-ENTREGA.md, na última seção. Talvez a confusão venha de você
+  ter visto a conversa sobre ele dentro da sessao-02.md.
+
+  Cada arquivo tem um papel diferente:
+
+  ┌────────────────────────┬───────────────────┬────────────────────────────┐
+  │        Arquivo         │      O que é      │       Tem checklist?       │
+  ├────────────────────────┼───────────────────┼────────────────────────────┤
+  │ uso-de-ia/sessao-01.md │ Export cru da     │ Não, e não deve ganhar:    │
+  │                        │ conversa 1        │ export não se edita        │
+  ├────────────────────────┼───────────────────┼────────────────────────────┤
+  │ uso-de-ia/sessao-02.md │ Export cru da     │ Não, e também não se edita │
+  │                        │ conversa 2        │                            │
+  ├────────────────────────┼───────────────────┼────────────────────────────┤
+  │ ANALISE.md             │ Resultado da      │ Não                        │
+  │                        │ sessão 1          │                            │
+  ├────────────────────────┼───────────────────┼────────────────────────────┤
+  │ README-ENTREGA.md      │ Resultado final   │ Sim, no fim                │
+  │                        │ da entrega        │                            │
+  └────────────────────────┴───────────────────┴────────────────────────────┘
+
+  O ANALISE.md não tem checklist porque o checklist do README é sobre a entrega
+  final: CLI funcionando, testes passando, repositório público. No fim da sessão
+  1 nada disso estava pronto, então todos os itens estariam desmarcados. O que
+  ele traz no lugar é o "Plano para a sessão de ação": os 5 passos que a sessão
+  2 seguiu. Esse plano é o papel do checklist naquele momento.
+
+  Fica assim: o ANALISE.md diz o que precisava ser feito, e o checklist do
+  README-ENTREGA.md mostra que foi feito. Eu não mudaria nada.
+
+✻ Cooked for 6s · done 18:14
+
+❯ certo ai agora tenho que dar um export novamente ne?                          
+
+⏺ Não é obrigatório, mas recomendo, porque assim a sessao-02.md fica completa. A
+  que está no GitHub termina no primeiro "exportei". Ficaram de fora a
+  descrição do repositório, o checklist, o link dos commits e estas últimas
+  perguntas, que estão registrados só nos commits.
+
+  Use o mesmo caminho de antes, e o arquivo novo substitui o antigo:
+
+  /export /Users/christiano/dev/onfly-desafio/entrega/uso-de-ia/sessao-02.md
+
+  Depois me mande um "exportei". Eu confiro se o arquivo novo é maior que o
+  antigo e não tem dado pessoal, faço o commit e subo.
+
+  A minha resposta ao seu "exportei" fica fora do export, mas é só a confirmação
+  de que subi. Não precisa exportar de novo depois disso.
+
+✻ Brewed for 5s · done 18:15
+
+❯ tem que dar um export e tambem atualizar a parte do acao ali ne               
+
+⏺ Sim. A tabela da sessão 2 na declaracao.md parou na revisão do texto e não
+  cita os commits, o repositório nem o checklist. Atualizo agora, antes do
+  export, para que a mudança também apareça na exportação.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Update(entrega/uso-de-ia/declaracao.md)
+  ⎿  Added 2 lines
+      42  | Testes das lacunas, validação defensiva, `report.json` confer
+          ido | 34 testes novos; números iguais à referência |
+      43  | Revisar a entrega: formato do README, texto mais curto e aces
+          sível, diagrama | `README-ENTREGA.md` reescrito e pasta `uso-de
+          -ia/` organizada |
+      44  | Conferir o checklist do README e a apresentação dos arquivos 
+          | Pendências levantadas; declaração com diagrama e índice das s
+          essões |
+      45 +| Um commit por defeito e repositório público no GitHub | Histó
+         +rico desde o projeto original, com os testes passando 0 → 0 → 2
+         + → 3 → 4 → 5 como na correção |                                
+      46 +| Checklist marcado e sessão 2 ligada aos commits | Seção "Chec
+         +klist" no `README-ENTREGA.md` e link para o histórico |        
+      47  
+      48  ## O que eu fiz
+      49  
+
+⏺ Update(entrega/uso-de-ia/declaracao.md)
+  ⎿  Added 1 line
+      51  - Conduzi a análise por partes (`data/`, `repositories/`, `serv
+          ices/`, `tests/`) e decidi não alterar os CSVs.
+      52  - Defini a ordem da correção: um defeito por vez, testando a ca
+          da passo.
+      53  - Revisei a entrega e pedi mudanças: estrutura no formato do RE
+          ADME, texto mais curto, diagrama e conferência do checklist.
+      54 +- Escolhi um commit por defeito e autorizei a publicação do rep
+         +ositório.                                                      
+      55  
+      56  ## O que a IA fez
+      57  
+
+⏺ Update(entrega/uso-de-ia/declaracao.md)
+  ⎿  Added 1 line
+      59  - Apontou os defeitos com arquivo e linha, além das fragilidade
+          s e das lacunas de teste.
+      60  - Escreveu as correções, a validação de entrada e os testes nov
+          os.
+      61  - Gerou e conferiu o `report.json` e redigiu o `ANALISE.md`, o 
+          `README-ENTREGA.md` e esta declaração.
+      62 +- Montou o histórico de commits, criou o repositório no GitHub 
+         +e conferiu os links e os diagramas publicados.                 
+
+⏺ Update(entrega/uso-de-ia/declaracao.md)
+  ⎿  Added 1 line, removed 1 line
+      59  - Apontou os defeitos com arquivo e linha, além das fragilidade
+          s e das lacunas de teste.
+      60  - Escreveu as correções, a validação de entrada e os testes nov
+          os.
+      61  - Gerou e conferiu o `report.json` e redigiu o `ANALISE.md`, o 
+          `README-ENTREGA.md` e esta declaração.
+      62 -- Montou o histórico de commits, criou o repositório no GitHub 
+         -e conferiu os links e os diagramas publicados.                 
+      62 +- Montou o histórico de commits, criou o repositório no GitHub 
+         +e conferiu os links publicados.                                
+
+⏺ Atualizei a declaracao.md só no seu computador. Ela ainda não foi para o
+  GitHub.
+
+  O que mudou:
+  - Tabela da sessão 2: ganhou duas linhas. Uma registra os commits por defeito
+    e o repositório público; a outra, o checklist e o link para os commits.
+  - "O que eu fiz": entrou "Escolhi um commit por defeito e autorizei a
+    publicação do repositório."
+  - "O que a IA fez": entrou "Montou o histórico de commits, criou o repositório
+    no GitHub e conferiu os links publicados."
+
+  Na declaração, deixei de fora a conferência dos diagramas, porque não consigo
+  ver a imagem gerada no GitHub; você é quem viu.
+
+  Agora pode exportar:
+
+  /export /Users/christiano/dev/onfly-desafio/entrega/uso-de-ia/sessao-02.md
+
+  Depois me mande um "exportei". Eu subo a declaracao.md e a sessao-02.md nova
+  num commit só.
+
+✻ Sautéed for 18s · done 18:15
