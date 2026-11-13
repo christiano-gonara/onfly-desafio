@@ -95,3 +95,13 @@ $ pytest -q
 ## Uso de IA
 
 Usei o Claude Code nas duas sessões. As exportações e a declaração estão em [`uso-de-ia/`](uso-de-ia/).
+
+## Checklist
+
+- [x] CLI roda com Python 3.11 (testado com 3.11.16)
+- [x] Gera `output/report.json` sem erro ([Como validar](#como-validar))
+- [x] Relatório segue o contrato (`test_report_shape_matches_contract`)
+- [x] `pytest -q` passa com os testes fornecidos (5 de 5, sem alteração; 39 no total)
+- [x] `README-ENTREGA.md` preenchido (este arquivo)
+- [x] Sessões + declaração ([`uso-de-ia/`](uso-de-ia/))
+- [x] Repositório público no GitHub
