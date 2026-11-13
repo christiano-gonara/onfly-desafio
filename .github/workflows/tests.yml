@@ -1,0 +1,31 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint
+        run: ruff check src tests
+
+      - name: Testes
+        run: pytest -q
+
+      - name: Gerar relatório
+        run: |
+          PYTHONPATH=src python -m onfly_report \
+            --input data/reservas_hoteis.csv \
+            --rates data/taxas_cambio.csv \
+            --output output/report.json
