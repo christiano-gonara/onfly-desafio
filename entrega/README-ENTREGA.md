@@ -41,7 +41,7 @@ Corrigi um defeito por vez e rodei os testes depois de cada um: 0 → 0 → 2 �
 Fiz em duas sessões, separando o diagnóstico da correção:
 
 - **Sessão 1, análise** (detalhes em [`ANALISE.md`](ANALISE.md)). Li as regras do README, rodei os testes e o CLI do jeito que estavam, chequei os CSVs (estão limpos, como o README diz) e calculei o resultado certo com um script à parte. A diferença entre esse cálculo e o que o CLI gerava apontou os 5 defeitos. Nenhum arquivo do projeto foi alterado nessa sessão.
-- **Sessão 2, ação.** Corrigi os defeitos na ordem da análise, adicionei testes para o que os fornecidos não cobriam, gerei o relatório e conferi com a referência da sessão 1.
+- **Sessão 2, ação** (passo a passo nos [commits](https://github.com/christiano-gonara/onfly-desafio/commits/main), um por defeito). Corrigi os defeitos na ordem da análise, adicionei testes para o que os fornecidos não cobriam, gerei o relatório e conferi com a referência da sessão 1.
 
 ## O que mais mudou
 
