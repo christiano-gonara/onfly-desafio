@@ -61,8 +61,18 @@ Fiz em duas sessões, separando o diagnóstico da correção:
 
   Os fornecidos (`test_currency.py`, `test_nights.py`, `test_regression_report.py`, `test_status_rules.py`, `test_top_hotels.py` e `helpers.py`) estão como vieram.
 
-> [!NOTE]
-> Um detalhe que parece erro, mas não é: somando os meses de `by_month` dá 396170.01, um centavo a mais que o total. Isso acontece porque cada valor é arredondado só na hora de escrever o JSON, como o README pede.
+## Um centavo que parece erro
+
+Somando os meses de `by_month` dá `396170.01`, um centavo a mais que o total. Não é erro: a conta inteira roda em `Decimal`, sem arredondar, e o arredondamento acontece só na hora de escrever o JSON — em cada campo, separadamente. Então o total é arredondado uma vez; os meses, uma vez cada.
+
+```mermaid
+flowchart LR
+    S["somas exatas<br/>Decimal"] --> T["total_amount_brl<br/>arredonda 1 vez"]
+    S --> M["cada mês<br/>arredonda 1 vez"]
+    T --> A["396170.00"]
+    M --> B["396170.01"]
+    A -. "1 centavo" .- B
+```
 
 ## Como validar
 

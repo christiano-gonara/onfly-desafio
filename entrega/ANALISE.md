@@ -55,7 +55,7 @@ Mais de 200 linhas; virada de ano; `by_month`; desempate do ranking por `hotel_i
 2. Adicionar testes novos para as lacunas (sem alterar os fornecidos).
 3. Validação defensiva: moeda sem taxa, status desconhecido, `rooms < 1` e `checkout <= checkin` viram `InputFileError` (saída 2, com número da linha).
 4. Gerar `output/report.json` e conferir com a tabela de referência acima.
-5. Escrever `entrega/RELATORIO.md` (resumo antes/depois, defeito → correção → prova, decisões).
+5. Escrever `entrega/README-ENTREGA.md` (resumo antes/depois, defeito → correção → prova, decisões).
 
 ## Decisão sobre tratamento de dados
 
