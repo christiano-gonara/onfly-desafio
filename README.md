@@ -83,9 +83,29 @@ São 39 testes: 5 que vieram com o desafio e 34 que adicionei. O GitHub roda tod
 src/onfly_report/   o programa
 tests/              os testes
 data/               CSVs de reservas e de câmbio
+docs/               mapa mental e diagramas
 entrega/            o que foi entregue: defeitos corrigidos e uso de IA
 output/             relatório gerado (não vai para o Git)
 ```
+
+## O que cada arquivo faz
+
+Todos ficam em `src/onfly_report/`.
+
+| Arquivo | O que faz |
+|---|---|
+| `cli.py` | Lê as opções e coordena tudo |
+| `repositories/csv_reservation_repository.py` | Lê o CSV de reservas |
+| `repositories/csv_rate_repository.py` | Lê o CSV de câmbio |
+| `services/row_parser.py` | Transforma cada linha do CSV em uma reserva |
+| `services/status_policy.py` | Decide o que é faturável |
+| `services/currency_converter.py` | Converte para reais |
+| `services/stay_calculator.py` | Conta as noites |
+| `services/report_builder.py` | Monta o relatório final |
+| `models.py` | Os dados de uma linha e de uma reserva |
+| `exceptions.py` | Os erros que dão código de saída `2` |
+
+Para ver isso em desenho, abra o [mapa mental](docs/MAPA-MENTAL.md) e os [diagramas](docs/DIAGRAMAS.md). Os diagramas são gerados pelo código com `python3 docs/gerar_diagramas.py`.
 
 ## Os 5 defeitos que foram corrigidos
 
