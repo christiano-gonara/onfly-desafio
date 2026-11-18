@@ -176,7 +176,7 @@ def arvore() -> str:
             no = no.setdefault(parte, {})
         no[partes[-1]] = None
 
-    itens = [(f"{RAIZ.name}/", "")] + list(linhas_da_arvore(raiz))
+    itens = [("onfly-desafio/", "")] + list(linhas_da_arvore(raiz))
     largura = max(len(esquerda) for esquerda, _ in itens)
     linhas = [f"{esquerda.ljust(largura)}  # {descricao}" if descricao else esquerda for esquerda, descricao in itens]
     return "```text\n" + "\n".join(linhas) + "\n```"
