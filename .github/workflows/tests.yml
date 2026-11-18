@@ -23,6 +23,9 @@ jobs:
       - name: Testes
         run: pytest -q
 
+      - name: Conferir diagramas
+        run: python docs/gerar_diagramas.py --check
+
       - name: Gerar relatório
         run: |
           PYTHONPATH=src python -m onfly_report \
