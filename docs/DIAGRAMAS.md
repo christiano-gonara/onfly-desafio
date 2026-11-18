@@ -120,6 +120,7 @@ onfly-desafio/
 │   ├── test_status_rules.py                   # Testes fornecidos: regras de status
 │   └── test_top_hotels.py                     # Testes fornecidos: ranking de hotéis
 ├── .gitignore
+├── ENUNCIADO.md
 ├── pyproject.toml
 ├── README.md
 ├── requirements-dev.txt
