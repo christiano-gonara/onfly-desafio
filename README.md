@@ -4,7 +4,7 @@
 
 Programa de linha de comando que lê as **reservas de hotel** de uma empresa e gera um **relatório em JSON**: quantas reservas, quantas noites, quanto foi gasto em reais e quais hotéis mais faturaram.
 
-Nasceu de um desafio da Onfly, em que o programa original entregava números errados. Aqui ele está corrigido e testado.
+Nasceu de um desafio da Onfly, em que o programa original entregava números errados. Aqui ele está corrigido e testado. O texto do desafio está em [`ENUNCIADO.md`](ENUNCIADO.md).
 
 ## O que ele faz
 
